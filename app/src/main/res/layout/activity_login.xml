@@ -3,10 +3,17 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:gravity="center"
         tools:context=".ui.activity.LoginActivity">
+    <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:lottie_loop="true"
+            app:lottie_fileName="deep.json"
+            app:lottie_autoPlay="true"/>
+
 
     <android.support.v7.widget.CardView android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -20,14 +27,14 @@
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:id="@+id/edtUsername"
-                          android:hint="Username"/>
+                          android:hint="Username (Ex. 16670056)"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
                                                            android:layout_height="wrap_content">
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:id="@+id/edtToken"
-                          android:hint="Token"/>
+                          android:hint="Key (Ex.8bd0997c7bb6378a9f47b093b583ed"/>
             </android.support.design.widget.TextInputLayout>
 
             <Button android:layout_width="match_parent" android:layout_height="wrap_content"

@@ -59,7 +59,7 @@ class JadwalPribadiAdapter (val dataItem: ArrayList<DataItem>, val context: Frag
         }
         viewHolder.listNamaHariJadwal.text = namaHari+ ", " + dataItem.get(i).waktu + ", " + dataItem.get(i).nama_ruang
         viewHolder.cvKlik.setOnClickListener {
-            Toast.makeText(context, dataItem.get(i).nama_dosen, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Semangat", Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.iavariav.ta_mobile_programming.ui.fragment
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -59,6 +60,7 @@ class ProfilFragment : Fragment() {
     private lateinit var alamat_kos: TextView
     private lateinit var ayah: TextView
     private lateinit var ibu: TextView
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -75,8 +77,8 @@ class ProfilFragment : Fragment() {
         transpor = view.tvTransportasi
         dosen_wali = view.tvDosenWali
         kelas = view.tvKelas
-        ktlhr = view.tvTanggalLahir
-        tlhr = view.tvTempatLahir
+        ktlhr = view.tvTempatLahir
+        tlhr = view.tvTanggalLahir
         agama = view.tvAgama
         almt = view.tvAlamat
         rt = view.tvRtRw
@@ -96,15 +98,16 @@ class ProfilFragment : Fragment() {
         ibu = view.tvIbu
 
 
-
-
         npm = activity?.intent!!.getStringExtra(Config.BUNDLE_NPM)
         key = activity?.intent!!.getStringExtra(Config.BUNDLE_KEY)
+
         npmTexView.text = npm
 //        Toast.makeText(activity, "" + npm + key , Toast.LENGTH_LONG).show()
         profilPresenter = ProfilPresenter(dataDiriModel, activity!!, jenisKelamin)
         profilPresenter.getProfil(key, npm, nik, nisn, nama, tahun_masuk, tgl_msk, kelamin, transpor, dosen_wali, kelas, ktlhr, tlhr,
             agama, alamat_kos, rt, dusun, kec, prop, telp, foto, kpos, email, darah, alamat_kos, ayah, ibu)
+
+
         return view;
     }
 

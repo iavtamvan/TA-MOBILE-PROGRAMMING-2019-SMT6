@@ -9,6 +9,7 @@ import com.iavariav.ta_mobile_programming.R
 import com.iavariav.ta_mobile_programming.model.DataItem
 import com.iavariav.ta_mobile_programming.rest.ApiService
 import com.iavariav.ta_mobile_programming.rest.RetroConfig
+import kotlinx.android.synthetic.main.fragment_profil.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 
@@ -112,6 +113,20 @@ class ProfilPresenter(
                     alamat_kos.text = items.get(i).alamatKos
                     ayah.text = items.get(i).ayah
                     ibu.text = items.get(i).ibu
+
+                    if (npm.equals("16670025")){
+                        ayah.text = "Kepo"
+                        ibu.text = "Kepo"
+                        nik.text = "Kepo"
+                        nisn.text = "Kepo"
+                        tlhr.text = "Kepo"
+                        dusun.text = "Kepo"
+                        alamat_kos.text = "Kepo"
+                        kelamin.text = "Rahasia"
+                        darah.text = "ABC"
+                        Glide.with(context).load("https://avatars0.githubusercontent.com/u/28645602?s=460&v=4").override(512, 512).error(R.drawable.error_image).into(foto)
+
+                    }
                 }
             }, {
                 error("Error" + it.message)
