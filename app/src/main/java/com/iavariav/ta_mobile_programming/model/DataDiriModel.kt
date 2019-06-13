@@ -2,105 +2,92 @@ package com.iavariav.ta_mobile_programming.model
 
 import com.google.gson.annotations.SerializedName
 
-data class DataItem(
-    val kode_jadwal: String,
-    val kode_kelas: String,
-    val kode_mk: String,
-    val nama_dosen: String,
-    val kode_dosen1: String,
-    val kode_dosen2: String,
-    val sks1: String,
-    val nama_ruang: String,
-    val hari: String,
-    val waktu: String,
-    val nama_mk: String,
-    val nama_mki: String,
-
+data class DataDiriModel(
 
     @field:SerializedName("rt")
-    val rt: String,
+    val rt: String? = null,
 
     @field:SerializedName("telp")
-    val telp: String,
+    val telp: String? = null,
 
     @field:SerializedName("rw")
-    val rw: String,
+    val rw: String? = null,
 
     @field:SerializedName("agama")
-    val agama: String,
+    val agama: String? = null,
 
     @field:SerializedName("kec")
-    val kec: String,
+    val kec: String? = null,
 
     @field:SerializedName("tahun_masuk")
-    val tahunMasuk: String,
+    val tahunMasuk: String? = null,
 
     @field:SerializedName("nmortu")
-    val nmortu: String,
+    val nmortu: Any? = null,
 
     @field:SerializedName("kelamin")
-    val kelamin: String,
+    val kelamin: String? = null,
 
     @field:SerializedName("nik")
-    val nik: String,
+    val nik: String? = null,
 
     @field:SerializedName("darah")
-    val darah: String,
+    val darah: String? = null,
 
     @field:SerializedName("dosen_wali")
-    val dosenWali: String,
+    val dosenWali: String? = null,
 
     @field:SerializedName("kelas")
-    val kelas: String,
+    val kelas: String? = null,
 
     @field:SerializedName("prop")
-    val prop: String,
+    val prop: String? = null,
 
     @field:SerializedName("email")
-    val email: String,
+    val email: String? = null,
 
     @field:SerializedName("dusun")
-    val dusun: String,
+    val dusun: String? = null,
 
     @field:SerializedName("nisn")
-    val nisn: String,
+    val nisn: String? = null,
 
     @field:SerializedName("npm")
-    val npm: String,
+    val npm: String? = null,
 
     @field:SerializedName("tgl_msk")
-    val tglMsk: String,
+    val tglMsk: String? = null,
 
     @field:SerializedName("kalmt")
-    val kalmt: String,
+    val kalmt: String? = null,
 
     @field:SerializedName("ayah")
-    val ayah: String,
+    val ayah: String? = null,
 
     @field:SerializedName("transpor")
-    val transpor: String,
+    val transpor: String? = null,
 
     @field:SerializedName("nama")
-    val nama: String,
+    val nama: String? = null,
 
     @field:SerializedName("tlhr")
-    val tlhr: String,
+    val tlhr: String? = null,
 
     @field:SerializedName("foto")
-    val foto: String,
+    val foto: String? = null,
 
     @field:SerializedName("ktlhr")
-    val ktlhr: String,
+    val ktlhr: String? = null,
 
     @field:SerializedName("kpos")
-    val kpos: String,
+    val kpos: String? = null,
 
     @field:SerializedName("alamat_kos")
-    val alamatKos: String,
+    val alamatKos: String? = null,
 
     @field:SerializedName("ibu")
-    val ibu: String,
+    val ibu: String? = null,
 
     @field:SerializedName("almt")
-    val almt: String
+    val almt: String? = null
 )

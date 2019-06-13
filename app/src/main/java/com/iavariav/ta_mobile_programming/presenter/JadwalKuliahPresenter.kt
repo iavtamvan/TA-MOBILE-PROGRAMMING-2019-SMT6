@@ -16,9 +16,9 @@ class JadwalKuliahPresenter(
     private var rv: RecyclerView,
     private var mAdapter: JadwalPribadiAdapter
 ) {
-    fun getJadwalKuliah() {
+    fun getJadwalKuliah(key: String, npm:String) {
         val apiService: ApiService = RetroConfig.provideApi()
-        apiService.getProfil("33c227f799464dac08f60f1b0d5770", "16670025")
+        apiService.getJadwalKuliah(key, npm)
             .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({

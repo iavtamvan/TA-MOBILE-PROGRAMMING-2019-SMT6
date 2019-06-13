@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".ui.activity.HomeActivity">
+
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:elevation="4dp"
+                                        android:id="@+id/cvKlikDataDiriSaya"
+                                        android:layout_margin="10dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:src="@drawable/account"/>
+
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@android:color/darker_gray"
+                  android:layout_marginLeft="4dp"
+                  android:layout_marginRight="4dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:gravity="center"
+                      android:text="DATA DIRI SAYA"
+                      android:textColor="@android:color/black"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:elevation="4dp"
+                                        android:id="@+id/cvKlikCekDataDiri"
+                                        android:layout_margin="10dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:src="@drawable/account"/>
+
+            <View android:layout_width="2dp" android:layout_height="match_parent"
+                  android:background="@android:color/darker_gray"
+                  android:layout_marginLeft="4dp"
+                  android:layout_marginRight="4dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:gravity="center"
+                      android:text="CEK DATA DIRI"
+                      android:textColor="@android:color/black"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
