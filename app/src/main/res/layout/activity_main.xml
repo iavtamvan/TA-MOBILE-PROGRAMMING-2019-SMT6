@@ -8,6 +8,15 @@
         android:layout_height="match_parent"
         tools:context=".ui.activity.DataActivity">
 
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="14dp"
+              android:text="iav.com"
+              android:gravity="center"
+              android:textColor="@android:color/black"
+              android:fontFamily="sans-serif-medium"
+              android:id="@+id/tvNameAplikationID"/>
+
     <com.ogaclejapan.smarttablayout.SmartTabLayout
             android:id="@+id/viewpagertab"
             android:layout_width="match_parent"
@@ -16,11 +25,11 @@
             android:clipToPadding="false"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            app:stl_defaultTabTextColor="#D500F9"
+            app:stl_defaultTabTextColor="@color/darkBlue"
             app:stl_distributeEvenly="true"
             app:stl_dividerColor="@android:color/transparent"
             app:stl_dividerThickness="1dp"
-            app:stl_indicatorColor="#D500F9"
+            app:stl_indicatorColor="@color/endblue"
             app:stl_indicatorGravity="bottom"
             app:stl_indicatorInterpolation="smart"
             app:stl_indicatorThickness="2dp"

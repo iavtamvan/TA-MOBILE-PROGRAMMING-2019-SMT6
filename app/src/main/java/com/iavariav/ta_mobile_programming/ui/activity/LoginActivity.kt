@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        supportActionBar?.hide()
         btnCekData.setOnClickListener {
             if (edtUsername.text.isEmpty() || edtToken.text.isEmpty()){
                 Toast.makeText(this, "Isi kolom dengan benar", Toast.LENGTH_LONG).show()
@@ -20,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
                 val intent: Intent = Intent(this, DataActivity::class.java)
                 intent.putExtra(Config.BUNDLE_NPM, edtUsername.text.toString().trim())
-                intent.putExtra(Config.BUNDLE_KEY, edtToken.text.toString().trim())
+                intent.putExtra(Config.BUNDLE_KEY, "8bd0997c7bb6378a9f47b093b583ed")
                 startActivity(intent)
             }
         }

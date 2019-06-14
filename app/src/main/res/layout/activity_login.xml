@@ -6,6 +6,7 @@
         android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/bg_login"
         tools:context=".ui.activity.LoginActivity">
     <com.airbnb.lottie.LottieAnimationView
             android:layout_width="match_parent"
@@ -30,16 +31,20 @@
                           android:hint="Username (Ex. 16670056)"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
-                                                           android:layout_height="wrap_content">
+                                                           android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:id="@+id/edtToken"
-                          android:hint="Key (Ex.8bd0997c7bb6378a9f47b093b583ed"/>
+                          android:enabled="false"
+                          android:text="IAV TAMVAN"
+                          android:inputType="textPassword"
+                          android:hint="API Key"/>
             </android.support.design.widget.TextInputLayout>
 
             <Button android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:text="CEK DATA"
-                    android:background="@color/colorPrimary"
+                    android:background="@color/darkBlue"
                     android:textColor="@android:color/white"
                     android:textSize="20dp"
                     android:id="@+id/btnCekData"
