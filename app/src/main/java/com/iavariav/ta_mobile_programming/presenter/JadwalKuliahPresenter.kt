@@ -3,6 +3,8 @@ package com.iavariav.ta_mobile_programming.presenter
 import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
+import android.widget.LinearLayout
 import com.iavariav.ta_mobile_programming.adapter.JadwalPribadiAdapter
 import com.iavariav.ta_mobile_programming.model.DataItem
 import com.iavariav.ta_mobile_programming.rest.ApiService
@@ -16,7 +18,7 @@ class JadwalKuliahPresenter(
     private var rv: RecyclerView,
     private var mAdapter: JadwalPribadiAdapter
 ) {
-    fun getJadwalKuliah(key: String, npm:String) {
+    fun getJadwalKuliah(key: String, npm:String, div:LinearLayout) {
         val apiService: ApiService = RetroConfig.provideApi()
         apiService.getJadwalKuliah(key, npm)
             .subscribeOn(Schedulers.newThread())
@@ -24,9 +26,16 @@ class JadwalKuliahPresenter(
             .subscribe({
                 items.clear()
                 items = it.data as ArrayList<DataItem>
-                rv.layoutManager = LinearLayoutManager(context)
-                mAdapter = JadwalPribadiAdapter(items, context)
-                rv.adapter = mAdapter
+                if (items.isEmpty()){
+                    div.visibility = View.VISIBLE
+                    rv.visibility = View.GONE
+                } else{
+                    div.visibility = View.GONE
+                    rv.visibility = View.VISIBLE
+                    rv.layoutManager = LinearLayoutManager(context)
+                    mAdapter = JadwalPribadiAdapter(items, context)
+                    rv.adapter = mAdapter
+                }
             }, {
                 error("Error" + it.message)
             })

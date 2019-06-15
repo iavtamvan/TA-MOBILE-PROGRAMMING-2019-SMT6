@@ -7,9 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 import com.iavariav.ta_mobile_programming.R
 import com.iavariav.ta_mobile_programming.helper.Config
@@ -60,6 +58,9 @@ class ProfilFragment : Fragment() {
     private lateinit var alamat_kos: TextView
     private lateinit var ayah: TextView
     private lateinit var ibu: TextView
+
+    private lateinit var svProfil: ScrollView
+    private lateinit var dvContainerDataKosong: LinearLayout
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -67,6 +68,8 @@ class ProfilFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_profil, container, false)
+        svProfil = view.svProfil
+        dvContainerDataKosong = view.dvContainerDataKosong
         npmTexView = view.tvNpm
         nik = view.tvNik
         nisn = view.tvNISN
@@ -105,7 +108,7 @@ class ProfilFragment : Fragment() {
 //        Toast.makeText(activity, "" + npm + key , Toast.LENGTH_LONG).show()
         profilPresenter = ProfilPresenter(dataDiriModel, activity!!, jenisKelamin)
         profilPresenter.getProfil(key, npm, nik, nisn, nama, tahun_masuk, tgl_msk, kelamin, transpor, dosen_wali, kelas, ktlhr, tlhr,
-            agama, alamat_kos, rt, dusun, kec, prop, telp, foto, kpos, email, darah, alamat_kos, ayah, ibu)
+            agama, alamat_kos, rt, dusun, kec, prop, telp, foto, kpos, email, darah, alamat_kos, ayah, ibu, dvContainerDataKosong, svProfil)
 
 
         return view;

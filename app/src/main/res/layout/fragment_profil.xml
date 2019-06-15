@@ -5,9 +5,44 @@
               android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:layout_margin="20dp"
+                  android:visibility="gone"
+                  android:id="@+id/dvContainerDataKosong">
+        <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="datakosong.json"
+                app:lottie_autoPlay="true"/>
+
+        <TextView
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:text="Data yang anda cari tidak Ditemukan :)"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="Cari Lagi?"
+                android:id="@+id/btnCariLagi"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"/>
+    </LinearLayout>
+
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/svProfil"
+            android:visibility="visible"
             android:layout_weight="1">
         <LinearLayout
                 android:layout_width="match_parent"
@@ -848,16 +883,4 @@
 
 
     </ScrollView>
-
-
-    <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyle"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnFollowMe"
-            android:visibility="gone"
-            android:text="Follow Me"/>
-
 </LinearLayout>

@@ -15,6 +15,7 @@ data class DataItem(
     val waktu: String,
     val nama_mk: String,
     val nama_mki: String,
+    val error: String,
 
 
     @field:SerializedName("rt")

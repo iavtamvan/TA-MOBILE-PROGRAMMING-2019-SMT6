@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent" android:layout_height="match_parent"
              tools:context=".ui.fragment.JadwalKuliahFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -10,4 +10,38 @@
     <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:id="@+id/rv"></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:layout_margin="20dp"
+                  android:visibility="gone"
+                  android:id="@+id/dvContainerDataKosong">
+        <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="datakosong.json"
+                app:lottie_autoPlay="true"/>
+
+        <TextView
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:text="Data yang anda cari tidak Ditemukan :)"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:text="Cari Lagi?"
+                android:id="@+id/btnCariLagi"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"/>
+    </LinearLayout>
+
 </FrameLayout>
